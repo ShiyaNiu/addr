@@ -1,0 +1,124 @@
+2023-03-11 21:04:27,325 - w2c.py[line:107] - INFO: -------------------word2vec,cws source:TEXT from train data--------------------
+2023-03-11 21:04:27,325 - w2c.py[line:108] - INFO: parameters:vector_size=100,window=5,min_count=10,workers=4,sg=0,hs=0,negative=10,epochs=2000
+2023-03-11 21:04:27,377 - w2c.py[line:120] - INFO: Better model in epoch 1... Best loss: 121660.73
+2023-03-11 21:04:27,434 - w2c.py[line:120] - INFO: Better model in epoch 2... Best loss: 104149.32
+2023-03-11 21:04:27,490 - w2c.py[line:120] - INFO: Better model in epoch 3... Best loss: 70817.48
+2023-03-11 21:04:27,549 - w2c.py[line:120] - INFO: Better model in epoch 4... Best loss: 63175.69
+2023-03-11 21:04:27,605 - w2c.py[line:120] - INFO: Better model in epoch 5... Best loss: 58261.16
+2023-03-11 21:04:29,984 - w2c.py[line:120] - INFO: Better model in epoch 8... Best loss: 49151.25
+2023-03-11 21:04:30,084 - w2c.py[line:120] - INFO: Better model in epoch 10... Best loss: 44520.69
+2023-03-11 21:04:30,274 - w2c.py[line:120] - INFO: Better model in epoch 14... Best loss: 37604.44
+2023-03-11 21:04:30,416 - w2c.py[line:120] - INFO: Better model in epoch 17... Best loss: 33748.25
+2023-03-11 21:04:30,519 - w2c.py[line:120] - INFO: Better model in epoch 19... Best loss: 31023.00
+2023-03-11 21:04:30,622 - w2c.py[line:120] - INFO: Better model in epoch 21... Best loss: 28679.50
+2023-03-11 21:04:30,814 - w2c.py[line:120] - INFO: Better model in epoch 25... Best loss: 25395.00
+2023-03-11 21:04:30,879 - w2c.py[line:120] - INFO: Better model in epoch 26... Best loss: 24460.88
+2023-03-11 21:04:30,988 - w2c.py[line:120] - INFO: Better model in epoch 28... Best loss: 23213.25
+2023-03-11 21:04:31,087 - w2c.py[line:120] - INFO: Better model in epoch 30... Best loss: 21696.00
+2023-03-11 21:04:31,187 - w2c.py[line:120] - INFO: Better model in epoch 32... Best loss: 20646.12
+2023-03-11 21:04:31,368 - w2c.py[line:120] - INFO: Better model in epoch 36... Best loss: 18727.75
+2023-03-11 21:04:31,426 - w2c.py[line:120] - INFO: Better model in epoch 37... Best loss: 18265.25
+2023-03-11 21:04:31,733 - w2c.py[line:120] - INFO: Better model in epoch 44... Best loss: 17973.25
+2023-03-11 21:04:31,793 - w2c.py[line:120] - INFO: Better model in epoch 45... Best loss: 15077.25
+2023-03-11 21:04:31,901 - w2c.py[line:120] - INFO: Better model in epoch 47... Best loss: 14306.12
+2023-03-11 21:04:32,007 - w2c.py[line:120] - INFO: Better model in epoch 49... Best loss: 13842.88
+2023-03-11 21:04:32,107 - w2c.py[line:120] - INFO: Better model in epoch 51... Best loss: 13216.88
+2023-03-11 21:04:32,166 - w2c.py[line:120] - INFO: Better model in epoch 52... Best loss: 13000.00
+2023-03-11 21:04:32,224 - w2c.py[line:120] - INFO: Better model in epoch 53... Best loss: 12693.88
+2023-03-11 21:04:32,282 - w2c.py[line:120] - INFO: Better model in epoch 54... Best loss: 12441.50
+2023-03-11 21:04:32,389 - w2c.py[line:120] - INFO: Better model in epoch 56... Best loss: 11868.00
+2023-03-11 21:04:32,569 - w2c.py[line:120] - INFO: Better model in epoch 60... Best loss: 11104.88
+2023-03-11 21:04:32,801 - w2c.py[line:120] - INFO: Better model in epoch 62... Best loss: 10690.88
+2023-03-11 21:04:32,941 - w2c.py[line:120] - INFO: Better model in epoch 65... Best loss: 10099.00
+2023-03-11 21:04:33,342 - w2c.py[line:120] - INFO: Better model in epoch 74... Best loss: 9103.50
+2023-03-11 21:04:33,563 - w2c.py[line:120] - INFO: Better model in epoch 79... Best loss: 8568.00
+2023-03-11 21:04:33,657 - w2c.py[line:120] - INFO: Better model in epoch 81... Best loss: 8395.00
+2023-03-11 21:04:33,799 - w2c.py[line:120] - INFO: Better model in epoch 84... Best loss: 7575.50
+2023-03-11 21:04:33,891 - w2c.py[line:120] - INFO: Better model in epoch 86... Best loss: 7409.50
+2023-03-11 21:04:34,082 - w2c.py[line:120] - INFO: Better model in epoch 87... Best loss: 7262.00
+2023-03-11 21:04:34,186 - w2c.py[line:120] - INFO: Better model in epoch 89... Best loss: 7108.50
+2023-03-11 21:04:34,242 - w2c.py[line:120] - INFO: Better model in epoch 90... Best loss: 7048.75
+2023-03-11 21:04:34,559 - w2c.py[line:120] - INFO: Better model in epoch 97... Best loss: 6623.75
+2023-03-11 21:04:34,619 - w2c.py[line:120] - INFO: Better model in epoch 98... Best loss: 6603.50
+2023-03-11 21:04:34,687 - w2c.py[line:120] - INFO: Better model in epoch 99... Best loss: 6502.50
+2023-03-11 21:04:34,769 - w2c.py[line:116] - INFO: Epoch 100, loss: 7581.25, time: 0min 0s
+2023-03-11 21:04:34,845 - w2c.py[line:120] - INFO: Better model in epoch 101... Best loss: 6438.25
+2023-03-11 21:04:35,072 - w2c.py[line:120] - INFO: Better model in epoch 105... Best loss: 6305.75
+2023-03-11 21:04:35,364 - w2c.py[line:120] - INFO: Better model in epoch 112... Best loss: 6131.75
+2023-03-11 21:04:35,524 - w2c.py[line:120] - INFO: Better model in epoch 115... Best loss: 5919.25
+2023-03-11 21:04:35,581 - w2c.py[line:120] - INFO: Better model in epoch 116... Best loss: 5903.25
+2023-03-11 21:04:35,639 - w2c.py[line:120] - INFO: Better model in epoch 117... Best loss: 5791.50
+2023-03-11 21:04:35,736 - w2c.py[line:120] - INFO: Better model in epoch 119... Best loss: 5760.00
+2023-03-11 21:04:36,038 - w2c.py[line:120] - INFO: Better model in epoch 126... Best loss: 5658.75
+2023-03-11 21:04:36,219 - w2c.py[line:120] - INFO: Better model in epoch 130... Best loss: 5412.25
+2023-03-11 21:04:36,478 - w2c.py[line:120] - INFO: Better model in epoch 136... Best loss: 5137.50
+2023-03-11 21:04:36,813 - w2c.py[line:120] - INFO: Better model in epoch 144... Best loss: 5059.75
+2023-03-11 21:04:36,968 - w2c.py[line:120] - INFO: Better model in epoch 147... Best loss: 4926.75
+2023-03-11 21:04:37,487 - w2c.py[line:120] - INFO: Better model in epoch 159... Best loss: 4923.00
+2023-03-11 21:04:37,545 - w2c.py[line:120] - INFO: Better model in epoch 160... Best loss: 4810.75
+2023-03-11 21:04:37,889 - w2c.py[line:120] - INFO: Better model in epoch 168... Best loss: 4630.25
+2023-03-11 21:04:37,946 - w2c.py[line:120] - INFO: Better model in epoch 169... Best loss: 4546.50
+2023-03-11 21:04:38,209 - w2c.py[line:120] - INFO: Better model in epoch 175... Best loss: 4502.25
+2023-03-11 21:04:38,342 - w2c.py[line:120] - INFO: Better model in epoch 178... Best loss: 4451.00
+2023-03-11 21:04:38,991 - w2c.py[line:120] - INFO: Better model in epoch 194... Best loss: 4291.50
+2023-03-11 21:04:39,240 - w2c.py[line:116] - INFO: Epoch 200, loss: 4900.25, time: 0min 0s
+2023-03-11 21:04:39,325 - w2c.py[line:120] - INFO: Better model in epoch 202... Best loss: 4275.25
+2023-03-11 21:04:39,460 - w2c.py[line:120] - INFO: Better model in epoch 205... Best loss: 4248.25
+2023-03-11 21:04:39,988 - w2c.py[line:120] - INFO: Better model in epoch 217... Best loss: 4174.75
+2023-03-11 21:04:40,475 - w2c.py[line:120] - INFO: Better model in epoch 228... Best loss: 4036.25
+2023-03-11 21:04:41,027 - w2c.py[line:120] - INFO: Better model in epoch 242... Best loss: 3888.00
+2023-03-11 21:04:41,620 - w2c.py[line:120] - INFO: Better model in epoch 257... Best loss: 3795.00
+2023-03-11 21:04:42,597 - w2c.py[line:120] - INFO: Better model in epoch 279... Best loss: 3636.50
+2023-03-11 21:04:42,924 - w2c.py[line:120] - INFO: Better model in epoch 287... Best loss: 3622.00
+2023-03-11 21:04:43,209 - w2c.py[line:120] - INFO: Better model in epoch 294... Best loss: 3590.00
+2023-03-11 21:04:43,457 - w2c.py[line:116] - INFO: Epoch 300, loss: 3680.00, time: 0min 0s
+2023-03-11 21:04:44,159 - w2c.py[line:120] - INFO: Better model in epoch 318... Best loss: 3514.50
+2023-03-11 21:04:45,716 - w2c.py[line:120] - INFO: Better model in epoch 357... Best loss: 3355.00
+2023-03-11 21:04:45,773 - w2c.py[line:120] - INFO: Better model in epoch 358... Best loss: 3350.25
+2023-03-11 21:04:47,419 - w2c.py[line:116] - INFO: Epoch 400, loss: 3387.50, time: 0min 0s
+2023-03-11 21:04:47,542 - w2c.py[line:120] - INFO: Better model in epoch 403... Best loss: 3338.50
+2023-03-11 21:04:48,211 - w2c.py[line:120] - INFO: Better model in epoch 420... Best loss: 3322.25
+2023-03-11 21:04:48,462 - w2c.py[line:120] - INFO: Better model in epoch 426... Best loss: 3299.50
+2023-03-11 21:04:48,782 - w2c.py[line:120] - INFO: Better model in epoch 434... Best loss: 3187.50
+2023-03-11 21:04:51,811 - w2c.py[line:120] - INFO: Better model in epoch 498... Best loss: 3145.00
+2023-03-11 21:04:51,941 - w2c.py[line:116] - INFO: Epoch 500, loss: 3457.50, time: 0min 0s
+2023-03-11 21:04:52,059 - w2c.py[line:120] - INFO: Better model in epoch 502... Best loss: 3118.25
+2023-03-11 21:04:52,692 - w2c.py[line:120] - INFO: Better model in epoch 513... Best loss: 3055.50
+2023-03-11 21:04:55,276 - w2c.py[line:120] - INFO: Better model in epoch 559... Best loss: 2743.00
+2023-03-11 21:04:57,462 - w2c.py[line:120] - INFO: Better model in epoch 593... Best loss: 2721.50
+2023-03-11 21:04:57,925 - w2c.py[line:116] - INFO: Epoch 600, loss: 2856.00, time: 0min 0s
+2023-03-11 21:04:59,468 - w2c.py[line:120] - INFO: Better model in epoch 624... Best loss: 2675.00
+2023-03-11 21:05:05,152 - w2c.py[line:116] - INFO: Epoch 700, loss: 3254.50, time: 0min 0s
+2023-03-11 21:05:07,307 - w2c.py[line:120] - INFO: Better model in epoch 734... Best loss: 2650.50
+2023-03-11 21:05:09,828 - w2c.py[line:120] - INFO: Better model in epoch 772... Best loss: 2597.00
+2023-03-11 21:05:11,427 - w2c.py[line:120] - INFO: Better model in epoch 797... Best loss: 2588.00
+2023-03-11 21:05:11,638 - w2c.py[line:116] - INFO: Epoch 800, loss: 2751.00, time: 0min 0s
+2023-03-11 21:05:18,008 - w2c.py[line:116] - INFO: Epoch 900, loss: 3155.50, time: 0min 0s
+2023-03-11 21:05:19,283 - w2c.py[line:120] - INFO: Better model in epoch 920... Best loss: 2582.00
+2023-03-11 21:05:19,373 - w2c.py[line:120] - INFO: Better model in epoch 921... Best loss: 2564.50
+2023-03-11 21:05:20,164 - w2c.py[line:120] - INFO: Better model in epoch 933... Best loss: 2527.50
+2023-03-11 21:05:20,582 - w2c.py[line:120] - INFO: Better model in epoch 939... Best loss: 2473.50
+2023-03-11 21:05:24,865 - w2c.py[line:116] - INFO: Epoch 1000, loss: 2703.00, time: 0min 0s
+2023-03-11 21:05:29,361 - w2c.py[line:120] - INFO: Better model in epoch 1065... Best loss: 2467.50
+2023-03-11 21:05:31,537 - w2c.py[line:120] - INFO: Better model in epoch 1092... Best loss: 2423.50
+2023-03-11 21:05:32,124 - w2c.py[line:116] - INFO: Epoch 1100, loss: 2617.00, time: 0min 0s
+2023-03-11 21:05:36,788 - w2c.py[line:120] - INFO: Better model in epoch 1165... Best loss: 2384.50
+2023-03-11 21:05:39,217 - w2c.py[line:116] - INFO: Epoch 1200, loss: 2882.50, time: 0min 0s
+2023-03-11 21:05:45,126 - w2c.py[line:120] - INFO: Better model in epoch 1282... Best loss: 2362.00
+2023-03-11 21:05:46,480 - w2c.py[line:116] - INFO: Epoch 1300, loss: 2506.00, time: 0min 0s
+2023-03-11 21:05:50,450 - w2c.py[line:120] - INFO: Better model in epoch 1356... Best loss: 2326.50
+2023-03-11 21:05:54,177 - w2c.py[line:116] - INFO: Epoch 1400, loss: 2482.50, time: 0min 0s
+2023-03-11 21:06:01,007 - w2c.py[line:116] - INFO: Epoch 1500, loss: 2431.50, time: 0min 0s
+2023-03-11 21:06:02,294 - w2c.py[line:120] - INFO: Better model in epoch 1521... Best loss: 2308.00
+2023-03-11 21:06:05,354 - w2c.py[line:120] - INFO: Better model in epoch 1568... Best loss: 2288.50
+2023-03-11 21:06:07,678 - w2c.py[line:116] - INFO: Epoch 1600, loss: 2461.50, time: 0min 0s
+2023-03-11 21:06:08,510 - w2c.py[line:120] - INFO: Better model in epoch 1612... Best loss: 2285.50
+2023-03-11 21:06:08,903 - w2c.py[line:120] - INFO: Better model in epoch 1617... Best loss: 2164.00
+2023-03-11 21:06:14,647 - w2c.py[line:116] - INFO: Epoch 1700, loss: 2367.00, time: 0min 0s
+2023-03-11 21:06:16,271 - w2c.py[line:120] - INFO: Better model in epoch 1720... Best loss: 2154.50
+2023-03-11 21:06:18,942 - w2c.py[line:120] - INFO: Better model in epoch 1758... Best loss: 2135.00
+2023-03-11 21:06:21,843 - w2c.py[line:116] - INFO: Epoch 1800, loss: 2206.50, time: 0min 0s
+2023-03-11 21:06:25,083 - w2c.py[line:120] - INFO: Better model in epoch 1850... Best loss: 2095.00
+2023-03-11 21:06:28,309 - w2c.py[line:116] - INFO: Epoch 1900, loss: 2661.00, time: 0min 0s
+2023-03-11 21:06:33,521 - w2c.py[line:120] - INFO: Better model in epoch 1975... Best loss: 2040.00
+2023-03-11 21:06:35,273 - w2c.py[line:116] - INFO: Epoch 2000, loss: 2173.50, time: 0min 0s
