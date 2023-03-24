@@ -4,16 +4,10 @@
 # 模型测试
 import tensorflow as tf
 import numpy as np
-from tensorflow.keras import layers,losses,optimizers
+from keras import layers,losses
 from tensorflow_addons.layers import CRF
 from tensorflow_addons.text.crf import crf_log_likelihood
-from utils.custom_metrics import costom_f1,costom_sa
 
-def custom_error(y_true, y_pred):
-    _, potentials, sequence_length, chain_kernel = y_pred
-    crf_loss = tf.reduce_mean(-crf_log_likelihood(potentials,y_true,sequence_length,chain_kernel)[0])
-    # dense_loss = losses.SparseCategoricalCrossentropy(from_logits=True,reduction=losses.Reduction.SUM_OVER_BATCH_SIZE)(y_true,potentials)
-    return crf_loss
 
 class BiLstm(tf.keras.Model):
 
@@ -24,7 +18,7 @@ class BiLstm(tf.keras.Model):
             layers.LSTM(units=hidden_dim,return_sequences=True))
         self.dense = layers.TimeDistributed(
             layers.Dense(output_dim))
-        self.crf = CRF(output_dim,use_kernel=False,use_boundary=False)
+        self.crf = CRF(output_dim,use_kernel=False,use_boundary=False,name="crf")
         self.dropout = layers.Dropout(dropout)
 
     def call(self,inputs):
@@ -32,12 +26,19 @@ class BiLstm(tf.keras.Model):
         x = self.bilstm(x)
         x = self.dropout(x)
         y = self.dense(x)
-        y = self.crf(y)
+        y  = self.crf(y)
         return y
-
+    
+    def compute_loss(self, x=None, y=None, y_pred=None, sample_weight=None):
+        _, potentials, sequence_length, chain_kernel = y_pred
+        crf_loss = tf.reduce_mean(-crf_log_likelihood(potentials,y,sequence_length,chain_kernel)[0])
+        # mask = tf.not_equal(y,0)
+        # dense_loss = losses.SparseCategoricalCrossentropy(from_logits=True)(y,potentials,mask)
+        return crf_loss
 
 if __name__ == "__main__":
+    model = BiLstm(vocab_size=2438,
+                   embed_dim=100,
+                   hidden_dim=200,
+                   output_dim=59)
     
-    #构建模型
-    model = BiLstm()
-    model.compile(optimizer=optimizers.Adam(), loss=custom_error)
