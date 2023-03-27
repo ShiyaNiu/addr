@@ -3,10 +3,15 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import tensorflow as tf
-from keras import optimizers,losses
-from utils.custom_metrics import costom_f1,costom_sa
+from keras import losses,metrics
 from utils.data_generator import DataGenerator
 from BiLstm import BiLstm
+
+def scheduler(epoch, lr):
+  if epoch < 10:
+    return lr
+  else:
+    return lr * tf.math.exp(-0.1)
 
 if __name__ == "__main__":
     batch_size = 64
@@ -28,12 +33,12 @@ if __name__ == "__main__":
                    hidden_dim=200,
                    output_dim=dg_trn.vectorizer_label_layer.vocabulary_size())
     #模型编译
-    model.compile(optimizer=optimizers.Adam(), 
-                  metrics=['accuracy',costom_f1(),costom_sa()])
     #模型训练
+
+    learning_rate = tf.keras.callbacks.LearningRateScheduler(scheduler)
     csv_logger = tf.keras.callbacks.CSVLogger('addr/logs/bilstm_train_0320.log')
     early_stop = tf.keras.callbacks.EarlyStopping(
-        monitor="val_loss",
+        monitor="val_sa",
         min_delta=1e-2,
         patience=20,
         verbose=1,
@@ -41,12 +46,14 @@ if __name__ == "__main__":
     model_checkpoint = tf.keras.callbacks.ModelCheckpoint(
         filepath="addr/model_dir/bilstm_{epoch}",
         save_best_only=True,  # Only save a model if `val_loss` has improved.
-        monitor="val_loss",
+        monitor="val_sa",
+        mode="max",
         verbose=1,
     )
+    model.compile()
     model.fit(trn_data,
               epochs=2000,
-              callbacks=[csv_logger,early_stop,model_checkpoint],
+              callbacks=[csv_logger,early_stop,learning_rate,model_checkpoint],
               validation_data=dev_data)
     print(model.summary())
     

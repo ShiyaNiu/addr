@@ -5,6 +5,33 @@ import os,json,sys
 
 tf.config.run_functions_eagerly(True)
 
+class costom_acc(metrics.Metric):
+    def __init__(self, name="acc", **kwargs):
+        super(costom_acc, self).__init__(name=name, **kwargs)
+        self.positives = self.add_weight(name="positives", initializer="zeros")
+        self.count = self.add_weight(name="count", initializer="zeros")
+
+    @tf.function
+    def update_state(self, y_true, y_pred, sample_weight=None):
+        y_true = tf.cast(y_true, tf.int32)
+        y_pred = tf.cast(y_pred, tf.int32)
+        mask = tf.cast(tf.not_equal(y_true,0),tf.int32)
+        y_pred = y_pred * mask
+        for m,t,p in zip(mask,y_true,y_pred):
+            for i in range(len(m)):
+                if m[i] == 0:
+                    break
+                if t[i]==p[i]:
+                    self.positives.assign_add(1.0)
+                self.count.assign_add(1.0)
+
+    def result(self):
+        return self.positives / self.count
+
+    def reset_state(self):
+        self.positives.assign(0.0)
+        self.count.assign(0.0)
+    
 
 class costom_f1(metrics.Metric):
     def __init__(self, name="f1", **kwargs):
@@ -18,7 +45,7 @@ class costom_f1(metrics.Metric):
 
     @tf.function
     def update_state(self, y_true, y_pred, sample_weight=None):
-        # y_p = tf.cast(tf.argmax(y_pred,axis=-1),tf.int32)
+        y_p = y_pred
         y_p = tf.cast(y_pred, "int32")
         y_true = tf.cast(y_true, "int32")
         self.count_entity_dict(y_true, mode='1')
@@ -41,7 +68,7 @@ class costom_f1(metrics.Metric):
                 tag = self.label_vocab[tag]
                 if 'B-' in tag and flag == 0:
                     flag = 1
-                if ('E-' in tag and flag == 1) and 'S-' in tag:
+                if ('E-' in tag and flag == 1) or 'S-' in tag:
                     flag = 0
                     tag_name = tag[2:]
                     if mode == '1':
@@ -87,12 +114,13 @@ class costom_f1(metrics.Metric):
         tp = tf.reduce_sum(list(map(lambda x:x.numpy(),list(self.tp.values()))))
         pred_nums = tf.reduce_sum(list(map(lambda x:x.numpy(),list(self.pred_nums.values()))))
         true_nums = tf.reduce_sum(list(map(lambda x:x.numpy(),list(self.true_nums.values()))))
-        if pred_nums.numpy() and true_nums.numpy():
+        # print("tp,pred_nums,pred_nums:",tp,pred_nums,pred_nums)
+        if pred_nums.numpy()>0 and true_nums.numpy()>0:
             p = tp / pred_nums
             r = tp / true_nums
             f1 = 2 * (p * r) / (p + r)
             f1 = f1.numpy()
-        return max(0.0,f1)
+        return f1
 
     def reset_state(self):
         # The state of the metric will be reset at the start of each epoch.
@@ -107,8 +135,9 @@ class costom_sa(metrics.Metric):
         self.sa = self.add_weight(name="costom_sa", initializer="zeros")
         self.all = self.add_weight(name="all", initializer="zeros")
 
+    @tf.function
     def update_state(self, y_true, y_pred, sample_weight=None):
-        # y_p = tf.cast(tf.argmax(y_pred,axis=-1),tf.int32)
+        y_p = y_pred
         y_p = tf.cast(y_pred, "int32")
         y_true = tf.cast(y_true, "int32")
         for seq_t,seq_p in zip(y_true, y_p):
